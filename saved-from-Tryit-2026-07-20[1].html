@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Moreton Bay Colleges' Digital Devices</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f6f6f6;
+    color:#333;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background:linear-gradient(90deg,#5b0d1b,#7b1e2f,#9d3148);
+    color:white;
+    text-align:center;
+    padding:35px;
+    box-shadow:0 3px 10px rgba(0,0,0,.3);
+}
+
+header h1{
+    font-family:'Great Vibes',cursive;
+    font-size:58px;
+    font-weight:normal;
+    letter-spacing:1px;
+}
+
+/* ================= NAVIGATION ================= */
+
+nav{
+    display:flex;
+}
+
+nav a{
+    flex:1;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    padding:18px;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+    background:#6e1324;
+    border-right:1px solid rgba(255,255,255,.2);
+}
+
+nav a:last-child{
+    border-right:none;
+}
+
+nav a:hover{
+    background:#8d2035;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    width:80%;
+    margin:35px auto;
+}
+
+.hero img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+}
+
+/* ================= TESTIMONIALS ================= */
+
+.testimonials{
+    width:90%;
+    margin:auto;
+    margin-bottom:50px;
+}
+
+.testimonials h2{
+    text-align:center;
+    color:#6b1024;
+    margin-bottom:25px;
+    font-size:34px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    padding:22px;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+    border-top:6px solid #7b1e2f;
+}
+
+.card h3{
+    color:#7b1e2f;
+    margin-bottom:10px;
+}
+
+/* ================= MAIN CONTENT ================= */
+
+.main{
+    width:90%;
+    margin:auto;
+    display:flex;
+    gap:30px;
+    align-items:flex-start;
+}
+
+.left{
+    flex:2;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+.right{
+    flex:1;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+.left h2,
+.right h2{
+    color:#6b1024;
+    margin-bottom:15px;
+}
+
+.left p{
+    margin-bottom:15px;
+}
+
+.left ul{
+    margin-left:25px;
+    margin-bottom:20px;
+}
+
+.left li{
+    margin-bottom:10px;
+}
+
+/* ================= COMMENT BOX ================= */
+
+textarea{
+    width:100%;
+    height:120px;
+    resize:none;
+    padding:10px;
+    font-size:15px;
+}
+
+button{
+    width:100%;
+    margin-top:12px;
+    padding:12px;
+    background:#7b1e2f;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:17px;
+}
+
+button:hover{
+    background:#5c1222;
+}
+
+.comment{
+    margin-top:12px;
+    background:#f8ecef;
+    padding:12px;
+    border-left:5px solid #7b1e2f;
+    border-radius:6px;
+}
+
+/* ================= SOLUTIONS ================= */
+
+.solutions{
+    width:90%;
+    margin:50px auto;
+    background:white;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+.solutions h2{
+    text-align:center;
+    color:#6b1024;
+    margin-bottom:25px;
+    font-size:34px;
+}
+
+.solution{
+    background:#faf4f5;
+    margin-bottom:18px;
+    padding:18px;
+    border-left:6px solid #7b1e2f;
+    border-radius:8px;
+}
+
+/* ================= STATS ================= */
+
+.stats{
+    width:90%;
+    margin:50px auto;
+}
+
+.stats h2{
+    text-align:center;
+    color:#6b1024;
+    margin-bottom:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+th{
+    background:#7b1e2f;
+    color:white;
+}
+
+th,td{
+    padding:15px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#5b0d1b;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:850px){
+
+.main{
+    flex-direction:column;
+}
+
+nav{
+    flex-wrap:wrap;
+}
+
+nav a{
+    width:50%;
+    flex:none;
+}
+
+header h1{
+    font-size:42px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>The Moreton Bay Colleges' Digital Devices Policy</h1>
+
+</header>
+
+<nav>
+
+<a href="#information">Information</a>
+<a href="#problem">Our Problem</a>
+<a href="#solutions">Our Solution</a>
+<a href="#statistics">Statistics</a>
+
+</nav>
+
+<div class="hero">
+
+<img src="https://privateschoolsguide.com/images/comprofiler/cb_bannerimage_1518_6679f6c5d572d.png">
+
+</div>
+
+<section class="testimonials">
+
+<h2>Student Experiences</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Charlotte</h3>
+<p>"Sometimes I open my laptop to work, but within minutes I'm checking social media instead of talking with my classmates."</p>
+</div>
+
+<div class="card">
+<h3>Olivia</h3>
+<p>"Group work doesn't always feel collaborative because everyone ends up looking at their own screen."</p>
+</div>
+
+<div class="card">
+<h3>Amelia</h3>
+<p>"It's easy to become distracted by online games or notifications when I should be concentrating in class."</p>
+</div>
+
+<div class="card">
+<h3>Sophia</h3>
+<p>"I think we would communicate more if we occasionally completed activities without laptops."</p>
+</div>
+
+<div class="card">
+<h3>Isabella</h3>
+<p>"Sometimes I realise I've spent an entire lesson staring at my screen instead of interacting with the people around me."</p>
+</div>
+
+</div>
+
+</section>
+
+<div class="main">
+
+<div class="left" id="problem">
+
+<h2>The Problem</h2>
+
+<p>
+Laptops are valuable learning tools, but education and psychology research suggests
+that excessive reliance on digital devices can reduce face-to-face interaction,
+increase opportunities for distraction, and contribute to longer periods of
+sedentary behaviour.
+</p>
+
+<ul>
+
+<li><strong>Reduced social interaction:</strong> Face-to-face conversations help students build communication, empathy, teamwork and friendships. When everyone focuses on their own screen, opportunities for collaboration may decrease.</li>
+
+<li><strong>Digital distractions:</strong> Notifications, games and social media can interrupt concentration. Research has found that task-switching between schoolwork and entertainment can reduce learning efficiency and attention.</li>
+
+<li><strong>Physical inactivity:</strong> Long periods sitting behind a laptop can reduce movement throughout the school day, which may affect wellbeing, posture and energy levels.</li>
+
+<li><strong>Learning engagement:</strong> Collaborative discussions and hands-on classroom activities often improve participation, confidence and deeper understanding of concepts.</li>
+
+<li><strong>Balance is important:</strong> Technology is most effective when combined with active discussion, practical learning and opportunities for students to interact with one another.</li>
+
+</ul>
+
+<p>
+These findings suggest that schools can benefit from encouraging a healthy balance between digital learning and face-to-face collaboration rather than relying exclusively on laptops throughout the day.
+</p>
+
+</div>
+
+<div class="right">
+
+<h2>Comment Box</h2>
+
+<textarea id="commentInput" placeholder="Share your ideas..."></textarea>
+
+<button onclick="submitComment()">Submit</button>
+
+<div id="comments"></div>
+
+</div>
+
+</div>
+
+<section class="solutions" id="solutions">
+<center>
+<h2>Our Solutions</h2>
+
+<div class="solution">
+<h3>📚 Laptop-Free Collaborative Lessons</h3>
+<p>Introduce selected lessons where students work in small groups using discussion, whiteboards or printed resources to encourage communication and teamwork.</p>
+</div>
+
+<div class="solution">
+<h3>🎯 Stronger Classroom Focus</h3>
+<p>Teachers can establish clear expectations for when laptops should be open and when they should be closed, reducing opportunities for off-task gaming and social media use.</p>
+</div>
+
+<div class="solution">
+<h3>🏃 Active Learning Activities</h3>
+<p>Include movement-based learning, practical experiments and collaborative classroom challenges to reduce sedentary time and increase engagement.</p>
+</div>
+
+<div class="solution">
+<h3>💬 Digital Wellbeing Education</h3>
+<p>Teach students strategies for managing distractions, notifications and screen time so they develop lifelong healthy technology habits.</p>
+</div>
+
+<div class="solution">
+<h3>🤝 Balanced Technology Use</h3>
+<p>Continue using laptops where they clearly enhance learning while intentionally including opportunities for face-to-face collaboration and discussion throughout the school day.</p>
+</div>
+
+</section>
+
+<section class="stats" id="statistics">
+
+<h2>Research Highlights</h2>
+
+<table>
+
+<tr>
+<th>Finding</th>
+<th>Educational Research Indicates</th>
+</tr>
+
+<tr>
+<td>Face-to-face collaboration</td>
+<td>Supports communication, teamwork and relationship-building skills.</td>
+</tr>
+
+<tr>
+<td>Digital distractions</td>
+<td>Frequent interruptions from games or social media can reduce attention and learning efficiency.</td>
+</tr>
+
+<tr>
+<td>Extended sitting</td>
+<td>Long periods of screen-based work should be balanced with movement and physical activity.</td>
+</tr>
+
+<tr>
+<td>Balanced learning</td>
+<td>Combining technology with discussion and practical activities generally produces stronger student engagement.</td>
+</tr>
+
+</table>
+
+</section>
+
+<footer>
+
+<h3>The Moreton Bay Colleges' Digital Devices Policy</h3>
+
+<p>Encouraging balanced technology use to strengthen learning, wellbeing and student connections.</p>
+
+</footer>
+
+<script>
+
+function submitComment(){
+
+let input=document.getElementById("commentInput");
+
+let text=input.value.trim();
+
+if(text===""){
+alert("Please enter a comment.");
+return;
+}
+
+let div=document.createElement("div");
+
+div.className="comment";
+
+div.innerHTML="<strong>Anonymous Student:</strong><br>"+text;
+
+document.getElementById("comments").prepend(div);
+
+input.value="";
+
+}
+
+</script>
+
+</body>
+</html>
